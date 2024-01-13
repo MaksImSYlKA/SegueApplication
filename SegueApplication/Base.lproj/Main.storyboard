@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rFT-PW-wj1">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -20,10 +20,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Мои покупки" id="fMO-Cd-9zJ">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="LYe-J9-MnI"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="done" id="oSu-VY-XJO">
                             <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
                             <connections>
-                                <segue destination="xk2-bL-aH0" kind="presentation" modalPresentationStyle="fullScreen" id="aLi-tz-Yle"/>
+                                <segue destination="xk2-bL-aH0" kind="presentation" id="aLi-tz-Yle"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -37,11 +38,56 @@
             <objects>
                 <viewController id="xk2-bL-aH0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1i-KK-lTE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-Jq-lBj">
+                                <rect key="frame" x="60" y="60" width="273" height="102"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thc-ZZ-wgJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwn-O6-WiL">
+                                        <rect key="frame" x="0.0" y="68" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-ch-SaZ">
+                                <rect key="frame" x="119" y="366.33333333333331" width="155" height="109.33333333333331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMA-jt-1aw">
+                                        <rect key="frame" x="25" y="0.0" width="105" height="54.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SAVE">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-Ni-ATN">
+                                        <rect key="frame" x="0.0" y="54.666666666666686" width="155" height="54.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CANCEL">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lt1-pE-HlA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BiA-Jq-lBj" firstAttribute="leading" secondItem="lt1-pE-HlA" secondAttribute="leading" constant="60" id="FH7-mW-Sem"/>
+                            <constraint firstItem="BiA-Jq-lBj" firstAttribute="top" secondItem="lt1-pE-HlA" secondAttribute="top" constant="60" id="KFD-5I-51H"/>
+                            <constraint firstItem="kKh-ch-SaZ" firstAttribute="centerY" secondItem="y1i-KK-lTE" secondAttribute="centerY" id="TBx-ov-DWw"/>
+                            <constraint firstItem="lt1-pE-HlA" firstAttribute="trailing" secondItem="BiA-Jq-lBj" secondAttribute="trailing" constant="60" id="gbq-Ay-TI2"/>
+                            <constraint firstItem="kKh-ch-SaZ" firstAttribute="centerX" secondItem="y1i-KK-lTE" secondAttribute="centerX" id="jSb-Qm-591"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qbI-LX-7za"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U05-8t-qH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
