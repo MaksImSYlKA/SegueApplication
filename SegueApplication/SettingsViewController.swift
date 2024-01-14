@@ -7,23 +7,30 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - IB Outlets
+    @IBOutlet var minimumValueTF: UITextField!
+    @IBOutlet var maximumValueTF: UITextField!
+    
+    // MARK: - Public Properties
+    
+    // MARK: - Private Properties
+    
+    // MARK: - Initializers
+    
+    // MARK: - Overrides Methods
+    
+    // MARK: - IB Actions
+    
+    @IBAction func cancelButtonAction() {
     }
-    */
+    // MARK: - Public Methods
+    
+    // MARK: - Private Methods
 
 }
