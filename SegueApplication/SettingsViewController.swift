@@ -28,6 +28,7 @@ final class SettingsViewController: UIViewController {
     // MARK: - IB Actions
     
     @IBAction func cancelButtonAction() {
+        dismiss(animated: true)
     }
     // MARK: - Public Methods
     
