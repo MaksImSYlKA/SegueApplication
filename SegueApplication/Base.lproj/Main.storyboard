@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rFT-PW-wj1">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegueApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -33,46 +33,49 @@
             </objects>
             <point key="canvasLocation" x="33" y="-4"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="mcV-dw-6AD">
             <objects>
-                <viewController id="xk2-bL-aH0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y1i-KK-lTE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                <viewController id="xk2-bL-aH0" customClass="SettingsViewController" customModule="SegueApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y1i-KK-lTE" customClass="Setting">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-Jq-lBj">
-                                <rect key="frame" x="60" y="60" width="273" height="102"/>
+                                <rect key="frame" x="60" y="60" width="255" height="102"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thc-ZZ-wgJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwn-O6-WiL">
-                                        <rect key="frame" x="0.0" y="68" width="273" height="34"/>
+                                        <rect key="frame" x="0.0" y="68" width="255" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-ch-SaZ">
-                                <rect key="frame" x="119" y="366.33333333333331" width="155" height="109.33333333333331"/>
+                                <rect key="frame" x="110" y="268.5" width="155" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMA-jt-1aw">
-                                        <rect key="frame" x="25" y="0.0" width="105" height="54.666666666666664"/>
+                                        <rect key="frame" x="25" y="0.0" width="105" height="55"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="SAVE">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-Ni-ATN">
-                                        <rect key="frame" x="0.0" y="54.666666666666686" width="155" height="54.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="55" width="155" height="55"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="CANCEL">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                             <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelButtonAction" destination="xk2-bL-aH0" eventType="touchUpInside" id="u5j-rV-XJc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -88,6 +91,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qbI-LX-7za"/>
+                    <connections>
+                        <outlet property="maximumValueTF" destination="wwn-O6-WiL" id="dOh-Ea-heh"/>
+                        <outlet property="minimumValueTF" destination="thc-ZZ-wgJ" id="Mcg-mB-EIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U05-8t-qH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +106,7 @@
                 <navigationController title="Мои покупки" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="rFT-PW-wj1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="h5G-gt-qoJ">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
